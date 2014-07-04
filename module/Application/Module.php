@@ -16,9 +16,16 @@ class Module
 {
     public function onBootstrap(MvcEvent $e)
     {
+        $e->getApplication()->getServiceManager()->get('translator');
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+        $eventManager->attach('route', function($e) {
+
+            // decide which theme to use by get parameter
+            $layout = 'enterprise/layout';      //Podría obtenerse de base de datos, por ahora simplificamos
+            $e->getViewModel()->setTemplate($layout);
+        });
     }
 
     public function getConfig()
