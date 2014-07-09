@@ -1,11 +1,10 @@
-<?php
+<?php 
 namespace Smeagol\Model;
 
 use Zend\Db\TableGateway\TableGateway;
-// Class Select
-use Zend\Db\Sql\Select;
 
-class NodeTable
+
+class UserTable
 {
     protected $tableGateway;
 
@@ -20,18 +19,7 @@ class NodeTable
         return $resultSet;
     }
 
-    public function getNoticiasFront()
-    {
-    	// Realizando un select para obetner los nodos de tipo noticia
-    	// los tres últimos para la portada
-        $resultSet = $this->tableGateway->select(function (Select $select) {
-     		$select->where->equalTo('node_type_id', 2);
-     		$select->order('id DESC')->limit(3);
-		});
-        return $resultSet;
-    }
-
-    public function getNode($id)
+    public function getUser($id)
     {
         $id  = (int) $id;
         $rowset = $this->tableGateway->select(array('id' => $id));
@@ -40,5 +28,20 @@ class NodeTable
             throw new \Exception("Could not find row $id");
         }
         return $row;
-    }  
+    }
+
+    public function getUserByUsername($username)
+    {
+  
+    	$rowset = $this->tableGateway->select(array('username' => $username));
+    
+    	$row = $rowset->current();
+    	if (!$row) {
+    		throw new \Exception("Could not find row $username");
+    	}
+    	
+    	return $row;
+    	
+    }
 }
+

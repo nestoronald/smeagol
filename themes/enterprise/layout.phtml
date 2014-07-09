@@ -25,13 +25,17 @@
 
 		<div id="navigation">
 			<ul>
-			    <li><a href="#" class="active" title="Home"><span>Home</span></a></li>
-			    <li><a href="#" title="About Us"><span>About Us</span></a></li>
-			    <li><a href="#" title="Services"><span>Services</span></a></li>
-			    <li><a href="#" title="Solutions"><span>Solutions</span></a></li>
-			    <li><a href="#" title="Support"><span>Support</span></a></li>
-			    <li><a href="#" title="Partners"><span>Partners</span></a></li>
-			    <li><a href="#" title="Contact"><span>Contact</span></a></li>
+			    <li><a href="<?php echo $this->basePath();?>/" class="active" title="Inicio"><span>Inicio</span></a></li>
+			    <li><a href="<?php echo $this->basePath();?>/page/nosotros" title="Nosotros"><span>Nosotros</span></a></li>
+			    <li><a href="<?php echo $this->basePath();?>/page/servicios" title="Servicios"><span>Servicios</span></a></li>
+			    <li><a href="<?php echo $this->basePath();?>/page/soluciones" title="Soluciones"><span>Soluciones</span></a></li>
+			    <li><a href="<?php echo $this->basePath();?>/page/soporte" title="Soporte"><span>Soporte</span></a></li>
+			    <li><a href="<?php echo $this->basePath();?>/page/contactenos" title="Contáctenos"><span>Contáctenos</span></a></li>
+			    <?php if($is_login){ ?>
+			    	<li><a href="<?php echo $this->basePath();?>/auth" title="Login"><span>Login</span></a></li>
+			    <?php } else { ?>		    
+			    	<li><a href="<?php echo $this->basePath();?>/logout" title="Login"><span>Logout</span></a></li>
+			    <?php } ?>
 			</ul>
 		</div>
 	</div>
@@ -44,20 +48,18 @@
 	<div class="shell">
 		<p class="left">
 			
-			<a href="#" title="Home" >Home</a>
+			<a href="<?php echo $this->basePath();?>/index" title="Inicio" >Inicio</a>
 			<span>|</span>
-			<a href="#" title="About Us">About Us</a>
+			<a href="<?php echo $this->basePath();?>/page/nosotros" title="Nosotros">Nosotros</a>
 			<span>|</span>
-			<a href="#" title="Services">Services</a>
+			<a href="<?php echo $this->basePath();?>/page/servicios" title="Servicios">Servicios</a>
 			<span>|</span>
-			<a href="#" title="Solutions">Solutions</a>
+			<a href="<?php echo $this->basePath();?>/page/soluciones" title="Soluciones">Soluciones</a>
 			<span>|</span>
-			<a href="#" title="Support">Support</a>
+			<a href="<?php echo $this->basePath();?>/page/soporte" title="Soporte">Soporte</a>
 			<span>|</span>
-			<a href="#" title="Partners">Partners</a>
-			<span>|</span>
-			<a href="#" title="Contact">Contact</a>
-			
+			<a href="<?php echo $this->basePath();?>/page/contactenos" title="Contáctenos">Contáctenos</a>
+   		    <span>|</span>
 				
 		</p>
 		
