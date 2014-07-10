@@ -12,5 +12,5 @@ INSTALL.txt
 LICENSE.txt
 README.txt
 demos/
-#public/cache/*
+public/cache/
 extras/documentation
