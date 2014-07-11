@@ -30,6 +30,17 @@ return array(
         					),
         			),
         	),
+                //con ajax
+                'login' => array(
+                    'type' => 'Zend\Mvc\Router\Http\Literal',
+                    'options' => array(
+                            'route'    => '/login',
+                            'defaults' => array(
+                                    'controller' => 'Application\Controller\Auth',
+                                    'action'     => 'login',
+                            ),
+                    ),  
+                ),
                 'logout' => array(
         			'type' => 'Zend\Mvc\Router\Http\Literal',
         			'options' => array(
@@ -128,7 +139,8 @@ return array(
     				  	    'themes/enterprise/js/jquery-1.4.2.js' => __DIR__ . '/../../../themes/enterprise/js/jquery-1.4.2.js',
     				  	    'themes/enterprise/js/jquery.jcarousel.js' => __DIR__ . '/../../../themes/enterprise/js/jquery.jcarousel.js',
     				  	    'themes/enterprise/js/jquery.pngFix.js' => __DIR__ . '/../../../themes/enterprise/js/jquery.pngFix.js',
-    				  	    'themes/enterprise/js/js-fnc.js' => __DIR__ . '/../../../themes/enterprise/js/js-fnc.js',    						
+    				  	    'themes/enterprise/js/js-fnc.js' => __DIR__ . '/../../../themes/enterprise/js/js-fnc.js', 
+    				  	    'js/login.js' => __DIR__ . '/../public/login.js',   						
     				),
     		),
     		'caching' => array(
