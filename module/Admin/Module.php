@@ -7,6 +7,7 @@ use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Smeagol\Model\Node;
 use Smeagol\Model\NodeTable;
 use Admin\Model\Page;
+use Admin\Model\Noticias;
 use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\TableGateway;
 
@@ -49,6 +50,11 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface {
 				'Admin\Model\Page' =>  function($sm) {
 					$tableGateway = $sm->get('NodeTableGateway');
 					$table = new Page($tableGateway);
+					return $table;
+				},
+                                'Admin\Model\Noticias' =>  function($sm) {
+					$tableGateway = $sm->get('NodeTableGateway');
+					$table = new Noticias($tableGateway);
 					return $table;
 				},
 		),

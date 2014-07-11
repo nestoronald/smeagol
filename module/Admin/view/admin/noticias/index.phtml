@@ -1,0 +1,18 @@
+<div class="post"> 
+
+<p>
+    <a href="<?php echo $this->url('admin', array('controller'=>'noticias','action'=>'add'));?>">Crear nueva Noticia</a>
+</p>
+<br/>
+	<table class="tcontent"><tr><th>Título</th><th>Autor<th>Modificado</th><th>&nbsp;</th><th>&nbsp;</th><tr>
+			<?php foreach ($noticias as $noticias1) : ?>
+				<tr>
+					<td><a href="<?php echo $this->escapeHtml($noticias1->url);?>"><?php echo $this->escapeHtml($noticias1->title);?></a></td>
+					<td><?php echo $this->escapeHtml($noticias1->user_id);?></td>
+					<td><?php echo $this->escapeHtml($noticias1->created);?></td>
+   				    <td><a href="<?php echo $this->url('admin', array('controller'=>'noticias','action'=>'edit','id'=>$noticias1->id));?>">Editar</a></td>
+ 					<td><a href="<?php echo $this->url('admin', array('controller'=>'noticias','action'=>'delete','id'=>$noticias1->id));?>">Borrar</a></td>
+				</tr>	 
+		<?php endforeach; ?>
+	</table>	
+</div>
