@@ -18,6 +18,8 @@ use Smeagol\Model\Node;
 use Smeagol\Model\NodeTable;
 use Smeagol\Model\User;
 use Smeagol\Model\UserTable;
+use Smeagol\Model\Menu;
+use Smeagol\Model\MenuTable;
 use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\TableGateway;
 use Zend\Authentication\AuthenticationService;
@@ -104,6 +106,17 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface {
             $resultSetPrototype = new ResultSet();
             $resultSetPrototype->setArrayObjectPrototype(new User());
             return new TableGateway('user', $dbAdapter, null, $resultSetPrototype);
+        },
+            'Smeagol\Model\MenuTable' => function($sm) {
+            $tableGateway = $sm->get('MenuTableGateway');
+            $table = new MenuTable($tableGateway);
+            return $table;
+        },
+                'MenuTableGateway' => function ($sm) {
+            $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
+            $resultSetPrototype = new ResultSet();
+            $resultSetPrototype->setArrayObjectPrototype(new Menu());
+            return new TableGateway('menu', $dbAdapter, null, $resultSetPrototype);
         },
             ),
         );
