@@ -6,7 +6,7 @@ return array(
         'Application',
         'Admin',
         'Page',
-        'Noticias'
+        'Noticia',
     ),
 
     // These are various options for the listeners attached to the ModuleManager

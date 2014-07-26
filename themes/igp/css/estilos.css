@@ -1,0 +1,340 @@
+body{margin:0px;padding:0px;font-family:Arial, Helvetica, sans-serif;font-size:12px; color:#4f4b4a;}
+
+.cabecera{background-image:url(/001.jpg);background-repeat:repeat-x;background-color:#cd840f;padding-top:10px;}
+
+.cabecera-perfil{background-image:url(/001b.jpg);background-repeat:repeat-x;background-color:#cd840f;padding-top:10px;}
+
+.perfil-investigadores{float:left; width:652px; padding:4px 0px 0px 12px;}
+
+/* CONTENEDORES CUERPO Y FORMATOS */
+
+.contenedor-simple{width:960px;}
+
+.contenedor-simple1{width:960px; background-image:url(/001a.jpg);background-repeat:repeat-x;}
+.contenedor-simple2{width:980px; background-image:url(/006a.gif);background-repeat:repeat-y;}
+
+.contenedor-logotipo{width:960px;text-align:left;padding-bottom:10px;}
+
+.contenedor-menu{width:940px;text-align:left;background-image:url(/004.gif);background-repeat:repeat-x;padding-top:6px;height:24px;font-weight:bold;color:#FFF;}
+
+
+.contenedor-centro{background-image:url(/006.gif); background-position:center; background-repeat:repeat-y; background-color:#FFF; width:100%; min-height:800px; height:auto !important; height:800px;}
+
+/*
+.contenedor-centro{width:100%; min-height:800px; height:auto !important;}
+*/
+.contenedor-pie{background-image:url(/007.jpg); background-repeat:repeat-x; height:40px; color:#FFF; width:100%; padding-top:30px;}
+
+.columna-izquierda{float:left; width:180px;; padding:10px 20px 20px 20px; text-align:left;}
+
+.columna-derecha{float:left; width:640px; *margin-left:10px; padding:10px 40px 20px 40px; text-align:left;}
+
+.linea-separacion{background-image:url(/008.gif); height:21px; background-repeat:repeat-x;}
+
+
+/* MEN� SUPERIOR HORIZONTAL - El desplegable est� en la hoja de estilos "desplegable.css" */
+
+a.menu{color:#FFF; text-decoration:none;}
+
+a.menu:hover{color:#cd8310; text-decoration:none;}
+
+/* FORMATOS DE TEXTO Y SUBT�TULOS */
+
+.txt-azul{color:#0d648c; font-weight:bold;}
+
+.txt-rojo{color:#ff0000; font-weight:bold;}
+
+.txt-mostaza{color:#bd852d; font-weight:bold;}
+
+.sumilla-gris{color:#6c6c6c; font-size:11px;}
+
+
+/* ENLACES */
+
+
+a{ color:#FF0000; text-decoration:none;}
+
+a:hover{ color:#6c6c6c; text-decoration:none;}
+
+a.azul{ color:#0d648c; text-decoration:none;}
+
+a.azul:hover{ color:#6c6c6c; text-decoration:none;}
+
+a.mostaza{ color:#bd852d; text-decoration:none;}
+
+a.mostaza:hover{ color:#6c6c6c; text-decoration:none;}
+
+a.negro{ color:#000000; text-decoration:none;}
+
+a.negro:hover{ color:#6c6c6c; text-decoration:none;}
+
+a.negro-bold{ color:#000000; text-decoration:none; font-weight:bold;}
+
+a.negro-bold:hover{ color:#000000; text-decoration:underline; font-weight:bold;}
+
+
+/* FORMULARIOS */
+
+.campo-login{float:left; width:80px; font-weight:bold; color:#0d648c;padding-top:2px;}
+
+.caja-login{width:90px; border:1px solid #cd840f; background-color:#FFF; }
+
+.contenedor-caja-login{float:left; width:90px; margin-bottom:5px;}
+
+.txt-recordarme{float:left; padding-top:5px;}
+
+.check-recordarme{float:left; padding:3px 10px 3px 3px;}
+
+.combo-1{border:1px solid #cd840f; background-color:#FFF; }
+
+
+/* BUSCADOR */
+
+.campo-buscador{float:left; width:120px; font-weight:bold; padding-top:2px;}
+
+.combo-buscador-1{border:1px solid #cd840f; background-color:#FFF; width:200px; }
+
+.combo-buscador-2{border:1px solid #cd840f; background-color:#FFF; width:100px; }
+
+.contenedor-caja-buscador-1{float:left; width:400px; margin-bottom:5px;}
+
+.caja-buscador-1{border:1px solid #cd840f; background-color:#FFF; width:400px; }
+.caja-buscador-2{border:1px solid #cd840f; background-color:#FFF; width:100px; }
+
+.contenedor-combo-buscador-1{float:left; width:200px; margin-bottom:5px;}
+
+.boton-buscar{ float:left; padding-left:10px;}
+
+.listado-busqueda{background-color:#f5f5f5; padding:10px; border:1px solid #ccc;}
+
+.resultado-busqueda{padding-bottom:10px; }
+
+.numero-paginas{float:left; font-size:14px; padding:0px 10px 0px 10px; font-weight:bold;}
+
+.paginacion{padding-top:20px;}
+
+a.resultado{color:#000; font-weight:bold; text-decoration:none;}
+
+a.resultado:hover{color:#000; font-weight:bold; text-decoration:underline;}
+
+
+/* BANNERS Y CONTENIDOS */
+
+.banner{width:960px; height:165px;}
+
+.banner-texto{float:left; width:450px; padding:15px 20px 15px 20px; text-align:left;}
+
+.banner-solo-texto{padding:15px 20px 15px 20px; text-align:left;}
+
+.banner-imagen-derecha{float:left;}
+
+.banner-imagen-izquierda{float:left;}
+
+.txt-blanco-16{color:#FFF; font-size:16px; line-height:16px; font-weight:bold;}
+
+.txt-blanco-20{color:#FFF; font-size:20px; line-height:20px; font-weight:bold;}
+
+.txt-blanco-24{color:#FFF; font-size:24px; line-height:24px; font-weight:bold;}
+
+.txt-blanco-30{color:#FFF; font-size:30px; line-height:30px; font-weight:bold;}
+
+.txt-blanco-36{color:#FFF; font-size:36px; line-height:32px; font-weight:bold;}
+
+
+/* SUBMENU */
+
+.submenu{color:#FF0000; border-bottom:1px solid #cc8310; font-weight:bold; padding:8px 10px 7px 0px;}
+
+
+/* CURRICULUMS */
+
+.columna-gris{background-color:#e9e9e9; border:1px solid #CCC;}
+
+.contenedor-gris-acerca{background-color:#000;color:#FFF;font-weight:bold;font-size:14px;padding:10px;}
+
+.contenido-columna-gris{padding:10px;}
+
+.imagen-perfil{border:1px solid #cc8310; padding:3px;}
+
+.linea-separacion2{background-image:url(/009.gif); height:21px; background-repeat:repeat-x;}
+
+.iconos-perfil{float:left; padding-left:10px;}
+
+.banner-perfil{width:960px; height:10px;}
+
+.nombre-perfil{float:left; width:395px;}
+
+.titulo-perfiles {width:935px;background-image:url(/004.gif);background-repeat:repeat-x;padding:3px 5px 0px 0px;height:27px;font-weight:bold;color:#FFF; float:left; z-index:3; font-size:14px; text-align:left;}
+
+/* APLICACIONES */
+.banner-aplicaciones{width:960px; height:60px;}
+
+
+/* LISTAS */
+
+ul.lista{ list-style-type:square; }
+
+ul.lista li{ color:#0d648c; }
+
+ul.lista li span{ color:#4f4b4a; }
+
+ol.lista li{ color:#0d648c; font-weight:BOLD; }
+
+ol.lista li span{ color:#4f4b4a; font-weight:normal; }
+
+
+/* TABLAS */
+
+/*Tablas*/
+
+.tablacebra{color:#FFF;font-family:Arial, Helvetica, sans-serif; border: 1px solid #7d7a75; border-style: dotted; border-width: 1px; width:85%;}
+
+tr.cab td{background-color:#000; font-size:11px;	color:#FFFFFF; font-weight:bold; padding:6px; border: 1px solid #000;}
+
+tr.par td{background-color:#e9e9e9; padding:6px; font-family: Arial; font-size: 11px; color: #454545; border: 1px solid #000; border-style: dotted; border-width: 1px; }
+
+tr.par img{color:#FFF;}
+
+tr.impar td{ background-color:#f6f6f6; padding:6px;	font-family: Arial;	font-size: 11px; color: #454545; border: 1px solid #000; border-style: dotted; border-width: 1px; }	
+
+tr.impar img{color:#fdeed5;}
+
+
+
+
+
+/* BANNER CON SLIDER */
+
+#slider { float: left; position: relative; width: 100%; height: 40px; }
+
+/* LEFT ARROW */
+		
+/* Sets position and main configs */
+.slider_arrow_left {bottom: 4px; cursor: pointer !important; float:left; height:13px; left:0px;	position: absolute;	width: 14px; z-index: 50 !important;}
+		
+/* left arrow image */
+.slider_arrow_left {background: url(/left_arrow.png) no-repeat top left;}
+
+/* RIGHT ARROW */
+		
+/* Sets position and main configs */
+.slider_arrow_right{ bottom: 4px; cursor: pointer; float:left; height:13px; left:17px; position: absolute; width:14px; z-index: 50;}
+		
+/* Right arrow Background */
+.slider_arrow_right {background: url(/right_arrow.png) no-repeat top left;}
+
+/* SELECTORS */
+
+/* Sets configs for selectors containers : absolute positioned in relation to #slider */
+.slider_selector, .slider_selector_dis {bottom: 5px; list-style: none; margin: 0 0 0 5px; position: absolute; right: 0px; z-index: 50;}
+	
+/* Sets image of selectors */
+.slider_selector li, .slider_selector_dis li {
+			
+			display: block !important;
+			background: url(/slider_selector.png) no-repeat top left;
+			cursor: pointer;
+			float: left;
+			margin: 0 3px !important;
+			height: 10px !important;
+			position: relative !important;
+			width: 10px !important;
+			
+		}
+		
+/* Sets the current selector */
+.slider_selector li.current, .slider_selector_dis li.current {background: url(/slider_selector_current.png) no-repeat top left;}
+			
+	
+/* Disables the selectors */
+.slider_selector_dis li {cursor: default !important; z-index: 50;}
+
+
+
+	/*------------------------
+	---------------- APLICATION SLIDER
+	------------------------*/
+
+	#aplicationsSliderId {
+		
+		height: 165px;
+		width: 960px;
+		
+	}
+	
+	/* images container - This is the most important container - Don't change important properties */
+	#aplicationsSliderId {
+		
+		list-style: none !important;
+		margin: 0 !important;
+		overflow: hidden !important;
+		position: relative !important;
+		
+	}
+
+		/* each slider item - Nothing to change here */
+		#aplicationsSliderId li {
+		
+			float: left;
+			margin: 0px 0px 0px -60px;
+			position: absolute;
+			width: 100%;
+			
+		}
+
+	
+#container {width: 100%; position: relative;}
+
+
+#s3slider {
+   width: 900px; /* important to be same as image width */
+   height: 60px; /* important to be same as image height */
+   position: relative; /* important */
+   overflow: hidden; /* important */
+}
+
+#s3slider ul{
+	list-style-type:none;
+}
+
+#s3sliderContent {
+   width: 400px; /* important to be same as image width or wider */
+   
+   top: 0; /* important */
+   margin-left: 0; /* important */
+}
+
+.s3sliderImage {
+   float: left; /* important */
+   position: relative; /* important */
+   display: none; /* important */
+}
+
+.s3sliderImage span {
+   position: absolute; /* important */
+   left: 0;
+   font: 10px/15px Arial, Helvetica, sans-serif;
+   padding: 10px 13px;
+   width: 374px;
+   background-color: #000;
+   filter: alpha(opacity=70); /* here you can set the opacity of box with text */
+   -moz-opacity: 0.7; /* here you can set the opacity of box with text */
+   -khtml-opacity: 0.7; /* here you can set the opacity of box with text */
+   opacity: 0.7; /* here you can set the opacity of box with text */
+   color: #fff;
+   display: none; /* important */
+   top: 0;
+
+   /*
+       if you put
+       top: 0; -> the box with text will be shown at the top of the image
+       if you put
+       bottom: 0; -> the box with text will be shown at the bottom of the image
+   */
+}
+
+.clear {
+   clear: both;
+} 
+
+

@@ -1,0 +1,61 @@
+a									{ text-decoration: none; }
+ul									{ list-style: none; }
+
+
+/* 
+	LEVEL ONE
+*/
+/*Para que se superponga al contenido de la página*/
+ul.dropdown                         { position: relative; }
+/*Para que se superponga al contenido de la página*/
+
+ul.dropdown                         { width: 951px;background-image:url(/004.gif);background-repeat:repeat-x;padding:0px 0px 0px 0px;height:30px;font-weight:bold;color:#FFF; float:left; z-index:100;}
+
+ul.dropdown li                      { font-weight: bold; float: left; zoom: 1;  text-align:left;}
+ul.dropdown a:hover		    { color: white; }
+ul.dropdown a:active                { color: #ffa500; }
+ul.dropdown li a                    { display: block; padding: 4px 8px; 
+                                      color: white; text-decoration: none; padding: 6px 10px;
+                                      border-right: 1px solid #778;
+                                      
+}
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover                { background: black; color: white; position: relative; }
+ul.dropdown li.hover a              { color: white; }
+
+
+/* 
+	LEVEL TWO
+*/
+ul.dropdown ul 						{ width: 220px; visibility: hidden; position: absolute; top: 100%; left: 0; }
+ul.dropdown ul li 					{ font-weight: normal; background: #414141; color: white; 
+                                                          border-bottom: 1px solid #ccc; float: none; }
+									  
+                                    /* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a					{ border-right: none; width: 100%; display: inline-block; } 
+
+/* 
+	LEVEL THREE
+*/
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; }
+
+/* Sub level menu links style */
+ul.dropdown li ul li{
+border-left: 1px solid gray;
+border-right: 1px solid gray;
+}
+
+/* Sub level menu links style */
+ul.dropdown li ul li a{
+font-size: 12px ;
+font-family: Arial,Helvetica,sans-serif;
+width: 160px; /*width of sub menus*/
+padding: 5px;
+margin: 0;
+border-top-width: 0;
+
+font-weight: bold;
+
+}

@@ -1,3 +1,13 @@
+<?php
+$this->HeadScript()->appendScript("
+		$().ready(function() {
+			CKEDITOR.replace( 'contenido', {
+    			filebrowserBrowseUrl : '/admin/index/elfinder', // eg. 'includes/elFinder/elfinder.html'
+  			});
+		});"
+);
+/*  */
+?>
 <h1>Crear Página</h1>
 <br>
 <form action="" method=post>
@@ -18,4 +28,3 @@
 	<br>
 	<h1><?php echo $mensaje; ?></h1>
 </form>
-

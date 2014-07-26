@@ -1,3 +1,13 @@
+<?php
+$this->HeadScript()->appendScript("
+		$().ready(function() {
+			CKEDITOR.replace( 'contenido', {
+    			filebrowserBrowseUrl : '/admin/index/elfinder', // eg. 'includes/elFinder/elfinder.html'
+  			});
+		});"
+);
+/*  */
+?>
 <h1>Edición de página</h1>
 <br>
 <form action="" method=post>

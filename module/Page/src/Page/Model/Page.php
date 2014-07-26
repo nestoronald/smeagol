@@ -38,4 +38,3 @@ class Page extends NodeTable
 		return $row;
 	}	
 }
-

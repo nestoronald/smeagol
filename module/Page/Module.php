@@ -15,20 +15,22 @@ use Zend\Db\TableGateway\TableGateway;
 
 class Module implements AutoloaderProviderInterface, ConfigProviderInterface
 {
-//    public function onBootstrap(MvcEvent $e)
-//    {
-//        $e->getApplication()->getServiceManager()->get('translator');
-//        $eventManager        = $e->getApplication()->getEventManager();
-//        $moduleRouteListener = new ModuleRouteListener();
-//        $moduleRouteListener->attach($eventManager);
-//        $eventManager->attach('route', function($e) {
-//
-//            // decide which theme to use by get parameter
-//            $layout = 'enterprise/layout';
-//            $e->getViewModel()->setTemplate($layout);
-//        });
-//    }
+    /*
+    public function onBootstrap(MvcEvent $e)
+    {
+        $e->getApplication()->getServiceManager()->get('translator');
+        $eventManager        = $e->getApplication()->getEventManager();
+        $moduleRouteListener = new ModuleRouteListener();
+        $moduleRouteListener->attach($eventManager);
+        $eventManager->attach('route', function($e) {
 
+            // decide which theme to use by get parameter
+            $layout = 'enterprise/layout';
+            $e->getViewModel()->setTemplate($layout);
+        });
+    }
+    */
+    
     public function getAutoloaderConfig()
     {
         return array(

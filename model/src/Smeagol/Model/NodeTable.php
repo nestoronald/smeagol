@@ -30,7 +30,7 @@ class NodeTable
 		});
         return $resultSet;
     }
-
+    
     public function getNode($id)
     {
         $id  = (int) $id;

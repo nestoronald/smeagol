@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -6,80 +7,68 @@
  * @copyright Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
-
 return array(
     'router' => array(
         'routes' => array(
             'home' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/',
+                    'route' => '/',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
-                        'action'     => 'index',
+                        'action' => 'index',
                     ),
                 ),
             ),
-        	'auth' => array(
-        			'type' => 'Zend\Mvc\Router\Http\Literal',
-        			'options' => array(
-        					'route'    => '/auth',
-        					'defaults' => array(
-        							'controller' => 'Application\Controller\Auth',
-        							'action'     => 'index',
-        					),
-        			),
-        	),
-                //con ajax
-                'login' => array(
-                    'type' => 'Zend\Mvc\Router\Http\Literal',
-                    'options' => array(
-                            'route'    => '/login',
-                            'defaults' => array(
-                                    'controller' => 'Application\Controller\Auth',
-                                    'action'     => 'login',
-                            ),
-                    ),  
-                ),
-                'logout' => array(
-        			'type' => 'Zend\Mvc\Router\Http\Literal',
-        			'options' => array(
-        					'route'    => '/logout',
-        					'defaults' => array(
-        							'controller' => 'Application\Controller\Auth',
-        							'action'     => 'logout',
-        					),
-        			),
-        	),
-            // The following is a route to simplify getting started creating
-            // new controllers and actions without needing to create a new
-            // module. Simply drop new controllers in, and you can access them
-            // using the path /application/:controller/:action
-            'application' => array(
-                'type'    => 'Literal',
+            'logout' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/application',
+                    'route' => '/logout',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Auth',
+                        'action' => 'logout',
+                    ),
+                ),
+            ),
+            'login' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route' => '/login',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Auth',
+                        'action' => 'login',
+                    ),
+                ),
+            ),
+            'auth' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/auth[/:action]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Auth',
+                        'action' => 'index',
+                    ),
+                ),
+            ),
+            //Alias de Urls
+            'node' => array(
+                'type' => 'Application\Router\Alias',
+                'options' => array(
+                    'route' => '/node[/:id]',
+                    'constraints' => array(
+                        'id' => '[0-9]+'
+                    ),
                     'defaults' => array(
                         '__NAMESPACE__' => 'Application\Controller',
-                        'controller'    => 'Index',
-                        'action'        => 'index',
+                        'controller' => 'Index',
+                        'action' => 'node',
+                        'id' => '0'
                     ),
                 ),
                 'may_terminate' => true,
-                'child_routes' => array(
-                    'default' => array(
-                        'type'    => 'Segment',
-                        'options' => array(
-                            'route'    => '/[:controller[/:action]]',
-                            'constraints' => array(
-                                'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                                'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
-                            ),
-                            'defaults' => array(
-                            ),
-                        ),
-                    ),
-                ),
             ),
         ),
     ),
@@ -91,14 +80,17 @@ return array(
         'aliases' => array(
             'translator' => 'MvcTranslator',
         ),
+        'factories' => array(
+            'primary_menus' => 'Application\Navigation\Service\PrimaryMenus',
+        ),
     ),
     'translator' => array(
         'locale' => 'en_US',
         'translation_file_patterns' => array(
             array(
-                'type'     => 'gettext',
+                'type' => 'gettext',
                 'base_dir' => __DIR__ . '/../language',
-                'pattern'  => '%s.mo',
+                'pattern' => '%s.mo',
             ),
         ),
     ),
@@ -106,49 +98,73 @@ return array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
             'Application\Controller\Auth' => 'Application\Controller\AuthController',
+            'Application\Router\Alias' => 'Application\Router\Alias',
         ),
     ),
     'view_manager' => array(
         'display_not_found_reason' => true,
-        'display_exceptions'       => true,
-        'doctype'                  => 'HTML5',
-        'not_found_template'       => 'error/404',
-        'exception_template'       => 'error/index',
+        'display_exceptions' => true,
+        'doctype' => 'HTML5',
+        'not_found_template' => 'error/404',
+        'exception_template' => 'error/index',
         'template_map' => array(
-            'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
+            'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
-            'error/404'               => __DIR__ . '/../view/error/404.phtml',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            'error/404' => __DIR__ . '/../view/error/404.phtml',
+            'error/index' => __DIR__ . '/../view/error/index.phtml',
         ),
         'template_path_stack' => array(
             __DIR__ . '/../../../themes',
             'application' => __DIR__ . '/../view',
         ),
-    ),    
-    // agregar este bloque al final
+    ),
+    // agregar este bloque
+    /*
     'asset_manager' => array(
     		'resolver_configs' => array(
     				'paths' => array(
     						__DIR__ . '/../public',
-    						 __DIR__ . '/../../../themes/enterprise/css/images',
+    				),
+    		),
+    ),
+     */  
+    // agregar este bloque al final
+    'asset_manager' => array(
+    		'resolver_configs' => array(
+    				'paths' => array(
+                                    __DIR__ . '/../public',
+                                    __DIR__ . '/../../../themes/enterprise/css/images',
+                                    __DIR__ . '/../../../themes/igp/img',
+                                    __DIR__ . '/../../../themes/igp/img/banner',
+                                    __DIR__ . '/../../../themes/igp/css/img',
     				),
     				// este mapeo puede ser dinamico desde base de datos o recorriendo el directorio
     				'map' => array(
-    						'themes/enterprise/css/style.css' => __DIR__ . '/../../../themes/enterprise/css/style.css',
-    						'themes/enterprise/css/ie6.css' => __DIR__ . '/../../../themes/enterprise/css/ie6.css',
-    				  	    'themes/enterprise/js/jquery-1.4.2.js' => __DIR__ . '/../../../themes/enterprise/js/jquery-1.4.2.js',
-    				  	    'themes/enterprise/js/jquery.jcarousel.js' => __DIR__ . '/../../../themes/enterprise/js/jquery.jcarousel.js',
-    				  	    'themes/enterprise/js/jquery.pngFix.js' => __DIR__ . '/../../../themes/enterprise/js/jquery.pngFix.js',
-    				  	    'themes/enterprise/js/js-fnc.js' => __DIR__ . '/../../../themes/enterprise/js/js-fnc.js', 
-    				  	    'js/login.js' => __DIR__ . '/../public/login.js',   						
+                                    'themes/enterprise/css/style.css' => __DIR__ . '/../../../themes/enterprise/css/style.css',
+                                    'themes/enterprise/css/ie6.css' => __DIR__ . '/../../../themes/enterprise/css/ie6.css',
+                                    'themes/enterprise/js/jquery-1.4.2.js' => __DIR__ . '/../../../themes/enterprise/js/jquery-1.4.2.js',
+                                    'themes/enterprise/js/jquery.jcarousel.js' => __DIR__ . '/../../../themes/enterprise/js/jquery.jcarousel.js',
+                                    'themes/enterprise/js/jquery.pngFix.js' => __DIR__ . '/../../../themes/enterprise/js/jquery.pngFix.js',
+                                    'themes/enterprise/js/js-fnc.js' => __DIR__ . '/../../../themes/enterprise/js/js-fnc.js',    						
+                                    'js/login.js' => __DIR__ . '/../public/login.js',   						
+                                                                                                    
+                                    'themes/igp/js/jquery-1.7.2.js' => __DIR__ . '/../../../themes/igp/js/jquery-1.7.2.js',
+                                    'themes/igp/js/jquery.dropdownPlain.js' => __DIR__ . '/../../../themes/igp/js/jquery.dropdownPlain.js',
+                                    'themes/igp/css/style_dropdowns.css' => __DIR__ . '/../../../themes/igp/css/style_dropdowns.css',
+                                    'themes/igp/css/style.css' => __DIR__ . '/../../../themes/igp/css/style.css',
+                                    'themes/igp/css/blueprint/print.css' => __DIR__ . '/../../../themes/igp/css/blueprint/print.css',
+                                    'themes/igp/css/blueprint/plugins/fancy-type/screen.css' => __DIR__ . '/../../../themes/igp/css/blueprint/plugins/fancy-type/screen.css',    						
+                                    'themes/igp/css/blueprint/screen.css' => __DIR__ . '/../../../themes/igp/css/blueprint/screen.css',    						
+                                    'themes/igp/js/jquery-ui-1.8.17.custom.min.js' => __DIR__ . '/../../../themes/igp/js/jquery-ui-1.8.17.custom.min.js',    						
+                                    'themes/igp/js/jquery.cycle.all.js' => __DIR__ . '/../../../themes/igp/js/jquery.cycle.all.js',    						
     				),
     		),
     		'caching' => array(
 				'default' => array(
 					'cache'     => 'Filesystem',
 					'options' => array(
-                    	'dir' => __DIR__.'/../../../public/cache', // path/to/cache
-            		),
+                                        'dir' => __DIR__.'/../../../public/cache', // path/to/cache
+                                        ),
 				),
     		),
     ),

@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>IGP - Base de datos Geofísicos</title>
+
+    <script type="text/javascript" src="/themes/igp/js/jquery-1.7.2.js"></script>	
+    <script type="text/javascript" src="/themes/igp/js/jquery.dropdownPlain.js"></script>
+    <link rel="stylesheet" href="/themes/igp/css/style_dropdowns.css" type="text/css" media="screen, projection"/>
+    <!-- Framework CSS -->
+    <link rel="stylesheet" href="/themes/igp/css/style.css" type="text/css">
+    
+    <link rel="stylesheet" href="/themes/igp/css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/themes/igp/css/blueprint/print.css" type="text/css" media="print">
+    
+    <!--[if lt IE 8]><link rel="stylesheet" href="/themes/igp/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+    <!-- Import fancy-type plugin for the sample page. -->
+    <link rel="stylesheet" href="/themes/igp/css/blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+ 	
+    <script type="text/javascript" src="/themes/igp/js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="/themes/igp/js/jquery.cycle.all.js"></script>
+		
+	<script type="text/javascript">
+	$(document).ready(function() {
+	    $('.slideshow').cycle({
+			fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		});
+	});
+	</script>
+
+	     
+  </head>
+  <body>
+   	<div id="header" class="cabecera">
+   		<div class="container" style="margin: 0 auto;">
+   	
+	   		<div class="span-9" style="text-align:left;"><br/><img src="logo_igp.gif"></div>
+		
+	   		<div class="span-11">&nbsp;</div>
+	   		<div class="span-4 last" style="height:90px;"><img src="igp-trans.png"></div>
+			
+			<div class="span-24">
+                            <ul class="dropdown">
+        	<li><a href="#">For Facilities</a>
+        		<ul class="sub_menu">
+        			 <li><a href="#">Artificial Turf</a></li>
+        			 <li>
+        				<a href="#">Batting Cages</a>
+        				<ul>
+        					<li><a href="#">Indoor</a></li>
+        					<li><a href="#">Outdoor</a></li>
+        				</ul>
+        			 </li>
+        			 <li><a href="#">Benches &amp; Bleachers</a></li>
+        			 <li><a href="#">Communication Devices</a></li>
+        			 <li><a href="#">Dugouts</a></li>
+        			 <li><a href="#">Fencing &amp; Windscreen</a></li>
+        			 <li><a href="#">Floor Protectors</a></li>
+        			 <li><a href="#">Foul Poles</a></li>
+        			 <li><a href="#">Netting</a></li>
+        			 <li><a href="#">Outdoor Furniture &amp; Storage</a></li>
+        			 <li><a href="#">Outdoor Signs</a></li>
+        			 <li><a href="#">Padding</a></li>
+        			 <li><a href="#">Scoreboards</a></li>
+        			 <li><a href="#">Shade Structures</a></li>
+        			 <li><a href="#"> - VIEW ALL - </a></li>
+        		</ul>
+        	</li>
+        	<li><a href="#">Field Maintenance</a>
+        		<ul class="sub_menu">
+        			<li><a href="#">All-in-One Team Cart</a></li>
+        			<li><a href="#">Air &amp; Electrical Reels</a></li>
+        			 <li><a href="#">Field Drags</a></li>
+        			 <li>
+        				<a href="#">Field Marking Equipment</a>
+        				<ul>
+        					<li><a href="#">Batter's Box Templates</a></li>
+        					<li><a href="#">Dryline Markers</a></li>
+        					<li><a href="#">Field Paint</a></li>
+        					<li><a href="#">Field Sprayers</a></li>
+        					<li><a href="#">Stencils</a></li>
+        				</ul>
+        			 </li>
+        			 <li>
+        				<a href="#">Field Tarps</a>
+        				<ul>
+        					<li><a href="#">Area Tarps</a></li>
+        					<li><a href="#">Growth Covers / Protectors</a></li>
+        					<li><a href="#">Infield Tarps</a></li>
+        					<li><a href="#">Tarp Accessories</a></li>
+        				</ul>
+        			 </li>
+        			 <li><a href="#">Hand Tools</a></li>
+        			 <li>
+        				<a href="#">Irrigation, Hoses, Nozzles</a>
+        				<ul>
+        					<li><a href="#">Hoses &amp; Hose Reels</a></li>
+        					<li><a href="#">Irrigation</a></li>
+        					<li><a href="#">Nozzles</a></li>
+        				</ul>
+        			 </li>
+        			 <li><a href="#">Layout &amp; Measurement Tools</a></li>
+        			 <li><a href="#">Moisture Removal</a></li>
+        			 <li><a href="#">Mound &amp; Home Plate Fortification</a></li>
+        			 <li><a href="#">Mowers &amp; Stripers</a></li>
+        			 <li><a href="#">Soil &amp; Enviornmental Management</a></li>
+        			 <li><a href="#">Soil Amendments</a></li>
+        			 <li><a href="#">Spreaders &amp; Sweepers</a></li>
+        			 <li><a href="#"> - VIEW ALL - </a></li>
+        		</ul>
+        	</li>
+        	<li><a href="#">Game-Practice Equipment</a>
+        		<ul class="sub_menu">
+        			 <li>
+        				<a href="#">Baseball - Softball</a>
+        				<ul>
+        					<li><a href="#">Base Accessories</a></li>
+        					<li><a href="#">Bases &amp; Home Plates</a></li>
+        					<li><a href="#">Game Accessories</a></li>
+        					<li><a href="#">Pitching Rubbers</a></li>
+        				</ul>
+        			 </li>
+        			 <li>
+        				<a href="#">Batting Practice Equipment</a>
+        				<ul>
+        					<li><a href="#">Backstops</a></li>
+        					<li><a href="#">Infield Screens</a></li>
+        					<li><a href="#">Jugs Pitching Machines</a></li>
+        					<li><a href="#">Turf Mats</a></li>
+        					<li><a href="#">Turf Protectors</a></li>
+        					<li><a href="#">Replacement Accessories</a></li>
+        				</ul>
+        			 </li>
+        			 <li>
+        				<a href="#">Batting Cages</a>
+        				<ul>
+        					<li><a href="#">Indoor</a></li>
+        					<li><a href="#">Outdoor</a></li>
+        				</ul>
+        			 </li>
+        			 <li>
+        				<a href="#">Portable Mounds</a>
+        				<ul>
+        					<li><a href="#">Batting Practice Mounds</a></li>
+        					<li><a href="#">Game Mounds</a></li>
+        					<li><a href="#">Practice Mounds</a></li>
+        				</ul>
+        			 </li>
+        			 <li>
+        				<a href="#">Football</a>
+        				<ul>
+        					<li><a href="#">First Down Markers</a></li>
+        					<li><a href="#">Football Accessories</a></li>
+        					<li><a href="#">Football Goalposts</a></li>
+        				</ul>
+        			 </li>
+        			 <li>
+        				<a href="#">Soccer</a>
+        				<ul>
+        					<li><a href="#">Soccer Goals</a></li>
+        					<li><a href="#">Soccer Accessories</a></li>
+        				</ul>
+        			 </li>
+        			 <li><a href="#"> - VIEW ALL - </a></li>
+        		</ul>
+        	</li>
+        	<li><a href="#">Training &amp; Conditioning</a>
+        		<ul class="sub_menu">
+        			 <li><a href="#">Ladders &amp; Sticks</a></li>
+        			 <li><a href="#">Hurdles</a></li>
+        			 <li><a href="#">Training Accessories</a></li>
+        			 <li><a href="#">Smart-Cart Training System</a></li>
+        			 <li><a href="#">Smart-Hurdle Collection</a></li>
+        			 <li><a href="#"> - VIEW ALL - </a></li>
+        		</ul>
+        	</li>
+        	<li><a href="#">Books-Videos</a>
+        		<ul class="sub_menu">
+        			 <li><a href="#">Field Design &amp; Maintenance</a></li>
+        			 <li><a href="#">Turf Management</a></li>
+        			 <li><a href="#">Training</a></li>
+        			 <li><a href="#"> - VIEW ALL - </a></li>
+        		</ul>
+        	</li>
+                                
+                            </ul>                                    
+                            
+			</div>
+	
+			<div class="span-24">
+		        <div class="slideshow" style="height:180px">
+					<div style="display: none; background-image:url(001e.jpg);">
+						<hr class="space">
+						<div class="span-12">
+							<div class="banner-left">
+								<img src="banner/roj.jpg">
+							</div>
+						</div>
+						<div class="span-12 last">
+	    					<div class="txt-blanco-30">Radio Observatorio de Jicamarca</div>
+							<div class="txt-blanco-16">Exportador de alta tecnolog&iacute;a en radares IRF.</div>
+						</div>
+					</div>
+	 
+					<div style="display: none; background-image:url(001e.jpg);">
+						<hr class="space">
+	    				<div class="span-12">
+	    					<div class="txt-blanco-30">Instrumento BLT en Huancayo</div>
+							<div class="txt-blanco-16">Monitoreando en forma continua las amenazas geofísicas.</div>
+						</div>
+						<div class="span-12 last">
+							<div class="banner-right">
+								<img src="blt_huancayo.jpg">
+							</div>
+						</div>	        
+					</div>
+					
+					<div style="display: none; background-image:url(001e.jpg);">
+						<hr class="space">
+						<div class="span-12">
+							<div class="banner-left">
+								<img src="est_gps_atico.jpg">
+							</div>
+						</div>
+						<div class="span-12 last">
+	    					<div class="txt-blanco-30">Estación GPS  en  Ático</div>
+							<div class="txt-blanco-16">Generador de conocimiento para mejorar políticas de prevención y mitigación.</div>
+						</div>
+					</div>
+			
+					<div style="display: none; background-image:url(001e.jpg);">
+						<hr class="space">
+	    				<div class="span-12">
+	    					<div class="txt-blanco-30">Observatorio de Huancayo</div>
+							<div class="txt-blanco-16">Búsqueda de la excelencia en la investigación y al servicio a la sociedad.</div>
+						</div>
+						<div class="span-12 last">
+							<div class="banner-right">
+								<img src="geomagnetismo.jpg">
+							</div>
+						</div>	        
+					</div>
+
+					<div style="display: none; background-image:url(001e.jpg);">
+						<hr class="space">
+						<div class="span-12">
+							<div class="banner-left">
+								<img src="huancayo.jpg">
+							</div>
+						</div>
+						<div class="span-12 last">
+	    					<div class="txt-blanco-30">RED-SSAT, estación Huancayo</div>
+							<div class="txt-blanco-16">Red de estaciones satelitales interconectadas que vigilan  nuestro territorio.</div>
+						</div>
+					</div>
+
+					<div style="display: none; background-image:url(001e.jpg);">
+						<hr class="space">
+	    				<div class="span-12">
+	    					<div class="txt-blanco-30">Radio Observatorio Astronómico de Sicaya</div>
+							<div class="txt-blanco-16">Fuente de innovación en investigación científica.</div>
+						</div>
+						<div class="span-12 last">
+							<div class="banner-right">
+								<img src="roas_panoramico.jpg">
+							</div>
+						</div>	        
+					</div>
+					
+	        	</div>
+	       	</div>
+		</div>        	
+	</div>  
+	<div style="background-color:#EEEEEE; border-bottom: 1px solid #BBBBBB; border-top: 1px solid #BBBBBB; height:32px;">
+		<div class="container" style="margin: 0 auto; text-align:right;">
+			<form method="post" name="formLogin" id="formLogin" onsubmit="">
+	            <span id="error"></span>
+	            <span>Usuario:</span>
+	            <span><input type="text" id="usuario" name="usuario" class="caja-login"></span>
+	            <span class="campo-login">Contraseña:</span>
+	            <span><input type="password" id="clave" name="clave" class="caja-login"></span>
+	            <span><input type="button" onclick="xajax_downloadLogin(xajax.getFormValues(formLogin));  return false;" name="Login" value="Login"></span>
+	            <span>&nbsp;</span>
+			</form>
+		</div>
+	</div>
+
+
+
+  
+	<div style="margin:0 auto 0 auto; width:970px; background-image: url(006a.gif);">
+		<div class="container" style="margin: 0 auto;">
+			<hr class="space">
+			<div class="span-15 prepend-1 colborder">
+			  <p>Lorem ipsum dolor sit amet, <em>consectetuer adipiscing elit</em>. Nunc congue ipsum vestibulum libero. Aenean vitae justo. Nam eget tellus. Etiam convallis, est eu lobortis mattis, lectus tellus tempus felis, a ultricies erat ipsum at metus.</p>
+			  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Morbi et risus</a>. Aliquam nisl. Nulla facilisi. Cras accumsan vestibulum ante. Vestibulum sed tortor. Praesent <span class="caps">SMALL CAPS</span> tempus fringilla elit. Ut elit diam, sagittis in, nonummy in, gravida non, nunc. Ut orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam egestas, orci eu imperdiet malesuada, nisl purus fringilla odio, quis commodo est orci vitae justo. Aliquam placerat odio tincidunt nulla. Cras in libero. Aenean rutrum, magna non tristique posuere, erat odio eleifend nisl, non convallis est tortor blandit ligula. Nulla id augue.</p>
+			  <p>Nullam mattis, odio ut tempus facilisis, metus nisl facilisis metus, auctor consectetuer felis ligula nec mauris. Vestibulum odio erat, fermentum at, commodo vitae, ultrices et, urna. Mauris vulputate, mi pulvinar sagittis condimentum, sem nulla aliquam velit, sed imperdiet mi purus eu magna. Nulla varius metus ut eros. Aenean aliquet magna eget orci. Class aptent taciti sociosqu ad litora.</p>
+			  <p>Vivamus euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vel nibh ut turpis dictum sagittis. Aliquam vel velit a elit auctor sollicitudin. Nam vel dui vel neque lacinia pretium. Quisque nunc erat, venenatis id, volutpat ut, scelerisque sed, diam. Mauris ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec mattis. Morbi dignissim sollicitudin libero. Nulla lorem.</p>
+			  <blockquote>
+			    <p>Integer cursus ornare mauris. Praesent nisl arcu, imperdiet eu, ornare id, scelerisque ut, nunc. Praesent sagittis erat sed velit tempus imperdiet. Ut tristique, ante in interdum hendrerit, erat enim faucibus felis, quis rutrum mauris lorem quis sem. Vestibulum ligula nisi, mattis nec, posuere et, blandit eu, ligula. Nam suscipit placerat odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Pellentesque tortor libero, venenatis vitae, rhoncus eu, placerat ut, mi. Nulla nulla.</p>
+			  </blockquote>
+			  <p>Maecenas vel metus quis magna pharetra fermentum. <em>Integer sit amet tortor</em>. Maecenas porttitor, pede sed gravida auctor, nulla augue aliquet elit, at pretium urna orci ut metus. Aliquam in dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, tellus id ornare posuere, quam nunc accumsan turpis, at convallis tellus orci et nisl. Phasellus congue neque a lorem.</p>
+			</div>
+			
+			<div class="span-7 last">
+			  <h3>A <span class="alt">Simple</span> Sidebar</h3>
+			  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ornare mattis nunc. Mauris venenatis, pede sed aliquet vehicula, lectus tellus pulvinar neque, non cursus sem nisi vel augue.</p>
+			  <p>Mauris a lectus. Aliquam erat volutpat. Phasellus ultrices mi a sapien. Nunc rutrum egestas lorem. Duis ac sem sagittis elit tincidunt gravida. Mauris a lectus. Aliquam erat volutpat. Phasellus ultrices mi a sapien. Nunc rutrum egestas lorem. Duis ac sem sagittis elit tincidunt gravida.</p>
+			  <p class="quiet">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ornare mattis nunc. Mauris venenatis, pede sed aliquet vehicula, lectus tellus pulvinar neque, non cursus sem nisi vel augue.</p>
+			  <h5>Incremental leading</h5>
+			  <p class="incr">Vestibulum ante ipsum primis in faucibus orci luctus vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ornare mattis nunc. Mauris venenatis, pede sed aliquet vehicula, lectus tellus pulvinar neque, non cursus sem nisi vel augue. sed aliquet vehicula, lectus tellus.</p>
+			  <p class="incr">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ornare mattis nunc. Mauris venenatis, pede sed aliquet vehicula, lectus tellus pulvinar neque, non cursus sem nisi vel augue. sed aliquet vehicula, lectus tellus pulvinar neque, non cursus sem nisi vel augue. ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ornare mattis nunc. Mauris venenatis, pede sed aliquet vehicula, lectus tellus pulvinar neque, non cursus sem nisi vel augue. sed aliquet vehicula, lectus tellus pulvinar neque, non cursus sem nisi vel augue.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="contenedor-pie">
+			<div class="container" style="margin: 0 auto;">
+	      	    <br>
+				<p>Calle Badajoz # 169 - Mayorazgo IV Etapa - Ate Vitarte | Central Telefónica: 317-2300 |
+				<a class="mostaza" href="#">Contacto</a>| Escríbenos a: <a class="mostaza" href="mailto:web@igp.gob.pe">web@igp.gob.pe</a>
+				</p>
+	     	</div>				      
+	</div>	
+  </body>
+</html>
