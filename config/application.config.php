@@ -5,8 +5,8 @@ return array(
         'AssetManager',
         'Application',
         'Admin',
-        'Page',
-        'Noticia',
+        //'Page',
+        //'Noticia',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
