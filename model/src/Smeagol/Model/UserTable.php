@@ -1,27 +1,24 @@
-<?php 
+<?php
+
 namespace Smeagol\Model;
 
 use Zend\Db\TableGateway\TableGateway;
 
+class UserTable {
 
-class UserTable
-{
     protected $tableGateway;
 
-    public function __construct(TableGateway $tableGateway)
-    {
+    public function __construct(TableGateway $tableGateway) {
         $this->tableGateway = $tableGateway;
     }
 
-    public function fetchAll()
-    {
+    public function fetchAll() {
         $resultSet = $this->tableGateway->select();
         return $resultSet;
     }
 
-    public function getUser($id)
-    {
-        $id  = (int) $id;
+    public function getUser($id) {
+        $id = (int) $id;
         $rowset = $this->tableGateway->select(array('id' => $id));
         $row = $rowset->current();
         if (!$row) {
@@ -30,17 +27,16 @@ class UserTable
         return $row;
     }
 
-    public function getUserByUsername($username)
-    {
-  
-    	$rowset = $this->tableGateway->select(array('username' => $username));
-    
-    	$row = $rowset->current();
-    	if (!$row) {
-    		throw new \Exception("Could not find row $username");
-    	}
-    	
-    	return $row;
-    	
+    public function getUserByUsername($username) {
+
+        $rowset = $this->tableGateway->select(array('username' => $username));
+
+        $row = $rowset->current();
+        if (!$row) {
+            throw new \Exception("Could not find row $username");
+        }
+
+        return $row;
     }
+
 }

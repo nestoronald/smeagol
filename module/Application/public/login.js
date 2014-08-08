@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	//form validation rules
+    //form validation rules
     $("#auth-form").validate({
         rules: {
             username: "required",
@@ -9,25 +9,25 @@ $(document).ready(function() {
             },
         },
         messages: {
-            username: "Por favor, ingrese su nombre de usuario",
+            username: "Please enter your username",
             password: {
-                required: "Por favor, ingrese su contraseña",
-                minlength: "Su contraseña debe tener al menos 5 caracteres"
+                required: "Please provide a password",
+                minlength: "Your password must be at least 5 characters long"
             },
         },
         submitHandler: function(form) {
-        	user=$("#username").val();
-        	pass=$("#password").val();
+            user = $("#username").val();
+            pass = $("#password").val();
 
-            $.post('/auth/process',{username:user, password:pass}, 
+            $.post('/auth/process', {username: user, password: pass},
             function(data) {
-            	if(!data.resultado){
-            		alert(data.mensaje);
-            	}else{
-                        alert("Bienvenido " + data.username);
-            		window.location.replace("/admin");
-            	}
-            },"json");
+                if (!data.resultado) {
+                    alert(data.mensaje);
+                } else {
+                    alert("Bienvenido " + data.username);
+                    window.location.replace("/admin");
+                }
+            }, "json");
         }
     });
 });

@@ -1,5 +1,6 @@
 <?php
 namespace Smeagol\Model;
+
 class Menu
 {
     public $id;
@@ -22,4 +23,3 @@ class Menu
 
     }
 }
-

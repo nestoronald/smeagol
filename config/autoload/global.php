@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Global Configuration Override
  *
@@ -10,7 +11,6 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
-
 return array(
     'db' => array(
         'driver' => 'Pdo',
@@ -26,7 +26,7 @@ return array(
         )
     ),
     'navigation' => array(
-        'admin' => array(), //Menus de Administración
-        'default' => array(), //Menus Primarios
+        'admin' => array(),      // Menus de Administracion
+        'default' => array(),    // Menus Primarios
     ),
 );

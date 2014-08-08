@@ -50,16 +50,16 @@ h1#logo a span { color: #685d5d; font-size: 10px; letter-spacing: 0px; display: 
 #navigation ul li a.active{ background-position: right 0; }
 #navigation ul li ul { display: none; }
 */
- /* el menú en si mismo */
+/* el menú en si mismo */
 #navigation,#login { float:right;}
-  .navigation  {
+.navigation  {
     border-radius: 5px;
     list-style-type: none;
     margin: 0 auto; /* si queremos centrarlo */
     padding: 0;
     /* la altura y su ancho dependerán de los textos */
     height: 40px; 
-    width: 650px;
+    width: 550px;
     /* el color de fondo */
     background: #555;
     background: -moz-linear-gradient(#555,#222);
@@ -67,13 +67,13 @@ h1#logo a span { color: #685d5d; font-size: 10px; letter-spacing: 0px; display: 
     background: -o-linear-gradient(#555,#222);
     background: -ms-linear-gradient(#555,#222);
     background: linear-gradient(#555,#222);
-  }
+}
 
-  /* si es necesario, evitamos que Blogger de problemas con los saltos de línea cuando escribimos el HTML */
-  .navigation  br { display:none; }
+/* si es necesario, evitamos que Blogger de problemas con los saltos de línea cuando escribimos el HTML */
+.navigation  br { display:none; }
 
-  /* cada item del menu */
-  .navigation  li {
+/* cada item del menu */
+.navigation  li {
     display: block;
     float: left; /* la lista se ve horizontal */
     height: 40px;
@@ -81,8 +81,8 @@ h1#logo a span { color: #685d5d; font-size: 10px; letter-spacing: 0px; display: 
     margin: 0;
     padding: 0;
     position: relative;
-  }
-  .navigation li a {
+}
+.navigation li a {
     border-left: 1px solid #000;
     border-right: 1px solid #666;
     color: #EEE;
@@ -100,15 +100,15 @@ h1#logo a span { color: #685d5d; font-size: 10px; letter-spacing: 0px; display: 
     -o-transition: color .2s ease-in-out;
     -ms-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out;
-  }
-  /* eliminamos los bordes del primer y el último */
-  .navigation li:first-child a { border-left: none; }
-  .navigation li:last-child a{ border-right: none; }
-  /* efecto hover cambia el color */
-  .navigation li:hover > a { color: Crimson; }
+}
+/* eliminamos los bordes del primer y el último */
+.navigation li:first-child a { border-left: none; }
+.navigation li:last-child a{ border-right: none; }
+/* efecto hover cambia el color */
+.navigation li:hover > a { color: Crimson; }
 
-  /* los submenús */
-  .navigation ul {
+/* los submenús */
+.navigation ul {
     border-radius: 0 0 5px 5px;
     left: 0;
     margin: 0;
@@ -128,12 +128,12 @@ h1#logo a span { color: #685d5d; font-size: 10px; letter-spacing: 0px; display: 
     -o-transition: opacity .25s ease .1s;
     -ms-transition: opacity .25s ease .1s;
     transition: opacity .25s ease .1s;
-  }
-  /* son visibes al poner el cursor encima */
-  .navigation li:hover > ul { opacity: 1; z-index:6;}
+}
+/* son visibes al poner el cursor encima */
+.navigation li:hover > ul { opacity: 1; z-index:6;}
 
-   /* cada un ode los items de los submenús */
-  .navigation ul li {
+/* cada un ode los items de los submenús */
+.navigation ul li {
     height: 0; /* no son visibles */
     overflow: hidden;
     padding: 0;
@@ -143,25 +143,25 @@ h1#logo a span { color: #685d5d; font-size: 10px; letter-spacing: 0px; display: 
     -o-transition: height .25s ease .1s;
     -ms-transition: height .25s ease .1s;
     transition: height .25s ease .1s;
-  }
-  .navigation li:hover > ul li {
+}
+.navigation li:hover > ul li {
     height: 36px; /* los mostramos */
     overflow: visible;
     padding: 0;
-  	z-index:6;
-  }
-  .navigation ul li a {
+    z-index:6;
+}
+.navigation ul li a {
     border: none;
     border-bottom: 1px solid #111;
     margin: 0;
     /* el ancho dependerá de los textos a utilizar */
     padding: 5px 20px;
     width: 165px;
-  }
-  /* el último n otiene un borde */
-  .navigation ul li:last-child a { border: none; }
-  .navigation ul li ul  { display: none; }
-  
+}
+/* el último n otiene un borde */
+.navigation ul li:last-child a { border: none; }
+.navigation ul li ul  { display: none; }
+
 /* End Header */
 
 /* Slider */
@@ -233,10 +233,9 @@ h1#logo a span { color: #685d5d; font-size: 10px; letter-spacing: 0px; display: 
 #footer p.right a:hover { color: #000; }
 
 /* End Footer */
-
+//...
 /* forms */
 input{
-	border: 1px solid #b6b6b6;
-	padding: 5px;
+    border: 1px solid #b6b6b6;
+    padding: 5px;
 }
-

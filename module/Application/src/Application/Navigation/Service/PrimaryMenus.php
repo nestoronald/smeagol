@@ -16,7 +16,6 @@ class PrimaryMenus extends DefaultNavigationFactory {
 
     protected function getPages(ServiceLocatorInterface $serviceLocator) {
         if (null === $this->pages) {
-
             $this->menuTable = $this->getMenuTable($serviceLocator);
             $menus = $this->menuTable->getNavigationArray(1, '', array(), false);
  

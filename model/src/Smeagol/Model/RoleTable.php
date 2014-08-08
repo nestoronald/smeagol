@@ -1,29 +1,23 @@
 <?php
+
 namespace Smeagol\Model;
 
 use Zend\Db\TableGateway\TableGateway;
-// Class Select
-use Zend\Db\Sql\Select;
 
-class RolePermissionTable
-{
+class RoleTable {
+
     protected $tableGateway;
 
-    public function __construct(TableGateway $tableGateway)
-    {
+    public function __construct(TableGateway $tableGateway) {
         $this->tableGateway = $tableGateway;
     }
 
-    public function fetchAll()
-    {
+    public function fetchAll() {
         $resultSet = $this->tableGateway->select();
         return $resultSet;
     }
-    
-    
-    public function getRole($type)
-    {
-        $type  = (string) $type;
+
+    public function getRole($type) {
         $rowset = $this->tableGateway->select(array('type' => $type));
         $row = $rowset->current();
         if (!$row) {
@@ -31,5 +25,4 @@ class RolePermissionTable
         }
         return $row;
     }
-    
 }

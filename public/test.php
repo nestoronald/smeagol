@@ -1,6 +1,6 @@
 <?php
 
-$cn = mysql_connect("localhost", "root", "mysql");
+$cn = mysql_connect("localhost", "root", "alumno");
 mysql_select_db("smeagol");
 
 // función que genera l array navigation
@@ -26,17 +26,18 @@ function get_menu_tree($parent_id = '0', $path = "", $exclude = '', $menu_tree_a
         $menu_tree_array[] = array('id' => $parent_id, 'text' => $menu['label']);
     }
 
+
     $rquery = "select id, name, label, parent_id, url, node_id from menu where parent_id=" . (int) $parent_id . " order by order_id";
 
     $menus_query = mysql_query($rquery, $cn);
     while ($menus = mysql_fetch_assoc($menus_query)) {
-        // valores por defecto
+        print_r($menus);
+        continue;
         $route = "home";
         $controller = "";
         $action = "";
 
         if ($exclude != $menus['id']) {
-            // si el campo nod_id es nulo 
             if (is_null($menus['node_id'])) {
                 if ($menus['url'] != '/') {
                     $m = explode("/", $menus["url"]);
@@ -44,13 +45,11 @@ function get_menu_tree($parent_id = '0', $path = "", $exclude = '', $menu_tree_a
                     if (!empty($m[1])) {
                         $controller = $m[1];
                     } else {
-                        // por defecto
                         $controller = "index";
                     }
                     if (!empty($m2)) {
                         $action = $m[2];
                     } else {
-                        // sino no esta defino 
                         $action = "index";
                     }
                 }
@@ -105,8 +104,7 @@ function get_menu_tree($parent_id = '0', $path = "", $exclude = '', $menu_tree_a
 }
 
 // Obteniendo los primary_menus  
-$menus = get_menu_tree(1, '', '0', '', false);
-
+//$menus= get_menu_tree(1, '', '0', '', false);
 // Obetiendo el menú de administración
-$menus = get_menu_tree(2, '', '0', '', false);
+$menus = get_menu_tree(1, '', '0', '', false);
 print_r($menus);

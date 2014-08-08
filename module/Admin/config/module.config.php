@@ -5,10 +5,10 @@ return array(
         'invokables' => array(
             'Admin\Controller\Index' => 'Admin\Controller\IndexController',
             'Admin\Controller\Page' => 'Admin\Controller\PageController',
-            'Admin\Controller\Noticia' => 'Admin\Controller\NoticiaController',
+            'Admin\Controller\Noticias' => 'Admin\Controller\NoticiasController',
         ),
     ),
-    // Seccion nueva donde definimos las reglas de ruteo y el ruteado principal
+    // Sección nueva donde definimos las reglas de ruteo y el ruteado principal
     'router' => array(
         'routes' => array(
             'admin' => array(
@@ -35,9 +35,9 @@ return array(
         ),
     ),
     'view_manager' => array(
-		'template_path_stack' => array(
-			'admin' => __DIR__ . '/../view',
-		),
+        'template_path_stack' => array(
+            'admin' => __DIR__ . '/../view',
+        ),
     ),
     'asset_manager' => array(
         'resolver_configs' => array(

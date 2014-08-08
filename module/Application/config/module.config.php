@@ -53,6 +53,21 @@ return array(
                     ),
                 ),
             ),
+             'soap' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/soap[/:action][/:id]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id' => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Soap',
+                        'action' => 'index',
+                    ),
+                ),
+            ),
+            
             //Alias de Urls
             'node' => array(
                 'type' => 'Application\Router\Alias',
@@ -70,6 +85,7 @@ return array(
                 ),
                 'may_terminate' => true,
             ),
+            
         ),
     ),
     'service_manager' => array(
@@ -99,6 +115,7 @@ return array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
             'Application\Controller\Auth' => 'Application\Controller\AuthController',
             'Application\Router\Alias' => 'Application\Router\Alias',
+            'Application\Controller\Soap' => 'Application\Controller\SoapController',
         ),
     ),
     'view_manager' => array(
@@ -119,54 +136,32 @@ return array(
         ),
     ),
     // agregar este bloque
-    /*
-    'asset_manager' => array(
-    		'resolver_configs' => array(
-    				'paths' => array(
-    						__DIR__ . '/../public',
-    				),
-    		),
-    ),
-     */  
     // agregar este bloque al final
     'asset_manager' => array(
-    		'resolver_configs' => array(
-    				'paths' => array(
-                                    __DIR__ . '/../public',
-                                    __DIR__ . '/../../../themes/enterprise/css/images',
-                                    __DIR__ . '/../../../themes/igp/img',
-                                    __DIR__ . '/../../../themes/igp/img/banner',
-                                    __DIR__ . '/../../../themes/igp/css/img',
-    				),
-    				// este mapeo puede ser dinamico desde base de datos o recorriendo el directorio
-    				'map' => array(
-                                    'themes/enterprise/css/style.css' => __DIR__ . '/../../../themes/enterprise/css/style.css',
-                                    'themes/enterprise/css/ie6.css' => __DIR__ . '/../../../themes/enterprise/css/ie6.css',
-                                    'themes/enterprise/js/jquery-1.4.2.js' => __DIR__ . '/../../../themes/enterprise/js/jquery-1.4.2.js',
-                                    'themes/enterprise/js/jquery.jcarousel.js' => __DIR__ . '/../../../themes/enterprise/js/jquery.jcarousel.js',
-                                    'themes/enterprise/js/jquery.pngFix.js' => __DIR__ . '/../../../themes/enterprise/js/jquery.pngFix.js',
-                                    'themes/enterprise/js/js-fnc.js' => __DIR__ . '/../../../themes/enterprise/js/js-fnc.js',    						
-                                    'js/login.js' => __DIR__ . '/../public/login.js',   						
-                                                                                                    
-                                    'themes/igp/js/jquery-1.7.2.js' => __DIR__ . '/../../../themes/igp/js/jquery-1.7.2.js',
-                                    'themes/igp/js/jquery.dropdownPlain.js' => __DIR__ . '/../../../themes/igp/js/jquery.dropdownPlain.js',
-                                    'themes/igp/css/style_dropdowns.css' => __DIR__ . '/../../../themes/igp/css/style_dropdowns.css',
-                                    'themes/igp/css/style.css' => __DIR__ . '/../../../themes/igp/css/style.css',
-                                    'themes/igp/css/blueprint/print.css' => __DIR__ . '/../../../themes/igp/css/blueprint/print.css',
-                                    'themes/igp/css/blueprint/plugins/fancy-type/screen.css' => __DIR__ . '/../../../themes/igp/css/blueprint/plugins/fancy-type/screen.css',    						
-                                    'themes/igp/css/blueprint/screen.css' => __DIR__ . '/../../../themes/igp/css/blueprint/screen.css',    						
-                                    'themes/igp/js/jquery-ui-1.8.17.custom.min.js' => __DIR__ . '/../../../themes/igp/js/jquery-ui-1.8.17.custom.min.js',    						
-                                    'themes/igp/js/jquery.cycle.all.js' => __DIR__ . '/../../../themes/igp/js/jquery.cycle.all.js',    						
-    				),
-    		),
-    		'caching' => array(
-				'default' => array(
-					'cache'     => 'Filesystem',
-					'options' => array(
-                                        'dir' => __DIR__.'/../../../public/cache', // path/to/cache
-                                        ),
-				),
-    		),
+        'resolver_configs' => array(
+            'paths' => array(
+                __DIR__ . '/../public', // public del module Application
+                __DIR__ . '/../../../themes/enterprise/css/images',
+            ),
+            // este mapeo puede ser dinamico desde base de datos o recorriendo el directorio
+            'map' => array(
+                'themes/enterprise/css/style.css' => __DIR__ . '/../../../themes/enterprise/css/style.css',
+                'themes/enterprise/css/ie6.css' => __DIR__ . '/../../../themes/enterprise/css/ie6.css',
+                'themes/enterprise/js/jquery-1.4.2.js' => __DIR__ . '/../../../themes/enterprise/js/jquery-1.4.2.js',
+                'themes/enterprise/js/jquery.jcarousel.js' => __DIR__ . '/../../../themes/enterprise/js/jquery.jcarousel.js',
+                'themes/enterprise/js/jquery.pngFix.js' => __DIR__ . '/../../../themes/enterprise/js/jquery.pngFix.js',
+                'themes/enterprise/js/js-fnc.js' => __DIR__ . '/../../../themes/enterprise/js/js-fnc.js',
+                'js/login.js' => __DIR__ . '/../public/login.js',
+            ),
+        ),
+        'caching' => array(
+            'default' => array(
+                'cache' => 'Filesystem',
+                'options' => array(
+                    'dir' => __DIR__ . '/../../../public/cache', // path/to/cache
+                ),
+            ),
+        ),
     ),
     // Placeholder for console routes
     'console' => array(

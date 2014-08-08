@@ -1,4 +1,5 @@
 <?php
+
 namespace Smeagol\Model;
 
 use Zend\Db\TableGateway\TableGateway;
@@ -27,6 +28,7 @@ class MenuTable {
         }
         return $row;
     }
+
     /**
      * Método que genera el array Zend\Navigation a partir de la tabla menu en base a un id base de menú .
      * 
@@ -75,7 +77,6 @@ class MenuTable {
         $resultSet = $statement->execute();
 
         foreach ($resultSet as $menu) {
-            //varibles por defecto
             $route = "home";
             $module = "application";
             $controller = "";
@@ -108,23 +109,23 @@ class MenuTable {
                 'label' => $menu['label'],
                 'route' => $route,
                 'module' => $module);
-            
+
             if (!empty($controller)) {
                 $page['controller'] = $controller;
                 if (!empty($action)) {
                     $page['action'] = $action;
                 }
             } else {
-                if($route!="home"){
+                if ($route != "home") {
                     $resource = "mvc:application.index.node";
-                }    
+                }
                 $page['params'] = array('id' => $menu['id'], 'link' => "/" . $menu['urlnode']);
             }
 
             if (!empty($resource)) {
                 $page['resource'] = $resource;
             }
-            
+
             if (empty($path)) {
                 $menuTree[] = $page;
                 end($menuTree);
@@ -146,5 +147,4 @@ class MenuTable {
         }
         return $menuTree;
     }
-
 }
